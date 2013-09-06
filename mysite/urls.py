@@ -18,4 +18,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     # url(r'^admin/', include('django.contrib.admin.url')),
     url(r'^search-form/$',views.search_form),
+    url(r'^search/$',views.search),
 )

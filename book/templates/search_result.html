@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Search_result</title>
+		<body>
+			<p>
+				You searched for: <strong>{{ query }}</strong>
+			</p>
+			{% if books %}	
+				<p>Found {{ books|length }} book{{ books|pluralize}}.</p>
+				<ul>
+					{%  for book in books%}
+					<li>{{ book.title }}</li>
+					<li>{{ book.publication_date }}</li>
+					{% endfor %}
+				</ul>
+			{% else %}
+				<p>No books matched your research</p>
+			{% endif %}
+		</body>	
+	</head>
+</html>
